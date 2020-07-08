@@ -10,6 +10,14 @@ console.log(currentPlayer);
 
 const cellElements = document.querySelectorAll(".cell");
 
+//reset button function
+const resetButton = document.querySelector("#reset");
+resetButton.addEventListener("click", resetfunction);
+
+//function to refresh page to start new game
+function resetfunction() {
+  location.reload();
+}
 //add event listener for each cell
 cellElements.forEach((cell) => {
   cell.addEventListener("click", handleClick, { once: true });
