@@ -3,7 +3,7 @@
 //player 1 always starts first and is red
 
 let currentPlayer = "Red";
-
+document.querySelector(".currentPlayer").innerHTML = `${currentPlayer}'s turn`;
 // playerSelection();
 
 console.log(currentPlayer);
@@ -51,6 +51,9 @@ function handleClick(clickedCellEvent) {
   console.table(gameResults);
   winLogic();
   playerSelection();
+  document.querySelector(
+    ".currentPlayer"
+  ).innerHTML = `${currentPlayer}'s turn`;
   //   console.log(document.getElementById.value);
 }
 // console.log(cellElements);
