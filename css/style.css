@@ -1,0 +1,41 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/* body {
+  margin: 0;
+} */
+body {
+  font-family: "Ruluko", sans-serif;
+  margin: 0px auto;
+  text-align: center;
+  width: 700px;
+}
+.board {
+  width: auto;
+  height: auto;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(3, auto);
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  border: 1px solid white;
+}
+#reset {
+  margin: 30px;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
