@@ -11,7 +11,7 @@ console.log(currentPlayer);
 
 const cellElements = document.querySelectorAll(".cell");
 let gameStatusActive = true;
-
+let counter = 0;
 //reset button function
 const resetButton = document.querySelector("#reset");
 resetButton.addEventListener("click", resetfunction);
@@ -51,6 +51,7 @@ function handleClick(clickedCellEvent) {
   arrayIndex = clickedCellIndex.split("");
   gameResults[arrayIndex[0]][arrayIndex[1]] = currentPlayer;
   console.table(gameResults);
+  counter++;
   winLogic();
   playerSelection();
   if (gameStatusActive === true) {
@@ -138,6 +139,9 @@ function winLogic() {
     gameStatusActive = false;
     winnerMsg = `${currentPlayer} is the winner a diagonal!`;
     removeEvents();
+  } else if (counter === 9) {
+    gameStatusActive = false;
+    winnerMsg = `Game ended with a draw`;
   } else {
     console.log("no winner yet");
   }
